@@ -1,2 +1,2 @@
-# 42WamUp
+# 42WarmUp
 Repo para depositar atividades do WarmUp
