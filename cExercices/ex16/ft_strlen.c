@@ -6,29 +6,29 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 21:03:10 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/03 21:09:05 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/04 21:45:41 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(*str)
+	while (*str)
 	{
 		i++;
 		str++;
 	}
-	
-	return i;
+	return (i);
 }
-
-int main(void)
+/*
+int	main(void)
 {
-	char *test = "testtest";
+	char	*test = "testtest";
 	printf("%d", ft_strlen(test));
-	return(0);
+	return (0);
 }
+*/

@@ -6,28 +6,28 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 22:37:17 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 01:03:57 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/04 21:48:13 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char a)
+void	ft_putchar(char a)
 {
 	write(1, &a, 1);
 }
 
-void ft_print_params(int argc, char* argv[])
+void	ft_print_params(int argc, char *argv[])
 {
-	int i;
-	int a;
+	int	i;
+	int	a;
 
 	i = 0;
 	a = 1;
-	while(a < argc)
+	while (a < argc)
 	{
 		i = 0;
-		while(argv[a][i])
+		while (argv[a][i])
 		{
 			ft_putchar(argv[a][i]);
 			i++;
@@ -37,24 +37,24 @@ void ft_print_params(int argc, char* argv[])
 	}
 }
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] && s2[i])
 	{
-		if(s1[i] != s2[i])
-			return s1[i] - s2[i];
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return s1[i] - s2[i];
+	return (s1[i] - s2[i]);
 }
 
-void ft_sort_params(int argc, char* argv[])
+void	ft_sort_params(int argc, char *argv[])
 {
 	char	*temp;
-	int i;
+	int		i;
 
 	i = 1;
 	while (i < argc - 1)
@@ -74,7 +74,7 @@ void ft_sort_params(int argc, char* argv[])
 	ft_print_params(argc, argv);
 }
 
-int main(int argc, char* argv[])
+int	main(int argc, char *argv[])
 {
 	if (argc > 1)
 	{
