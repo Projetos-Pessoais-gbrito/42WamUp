@@ -6,25 +6,44 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 23:47:17 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/08 19:32:20 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/08 22:34:25 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
+// int	ft_count_elements(char *a)
+// {
+// 	int	i;
 
-// void ft_putchar(char a){
-// 	write(1, &a, 1);
+// 	i = 0;
+// 	while (a[i])
+// 	{
+// 		if (a[i] == 'a')
+// 			return (1);
+// 		i++;
+// 	}
+// 	return (0);
 // }
 
-// int ft_count_if(char **tab, int (*f)(char*))
-// {
-	
-// }
+int	ft_count_if(char **tab, int (*f)(char *))
+{
+	int	i;
+	int	element_final_count;
 
-// int main(void)
+	i = 0;
+	element_final_count = 0;
+	while (tab[i])
+	{
+		if (f(tab[i]) == 1)
+			element_final_count++;
+		i++;
+	}
+	return (element_final_count);
+}
+
+// int	main(void)
 // {
-// 	char tab[10][10] = {{'1', '1'},{'2', '3'}};
-	
-// 	ft_count_if(tab, )
-// 	return(0);
+// 	char *tab[] = {"staring", "straing", NULL};
+
+// 	printf("%d", ft_count_if(tab, &ft_count_elements));
+// 	return (0);
 // }

@@ -1,12 +1,12 @@
-PATH:./srcs
+PATH:ex26/main.o
 
-HEADER:./srcs/includes
+# HEADER:./srcs/includes
 
-CC: cc
+# CC: cc
 
-all: $(PATH)%.o
+all: ex26/main.o
 
-$(PATH)%.o: ex20/ft_strdup.c
+ex26/main.o: ex26/ft_count_if.c
 	$(CC) -Werror -Wextra -Wall $< -o $@
 
 fclean:
