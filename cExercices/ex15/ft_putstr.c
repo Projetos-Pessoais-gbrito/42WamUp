@@ -3,20 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 20:52:20 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 21:44:35 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 18:31:07 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-void	ft_putchar(char a)
-{
-	write(1, &a, 1);
-}
+void	ft_putchar(char a);
 
 void	ft_putstr(char *str)
 {

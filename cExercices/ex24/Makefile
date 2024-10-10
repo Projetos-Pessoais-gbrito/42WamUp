@@ -15,7 +15,7 @@ LIBFT = libft.a
 all: $(LIBFT)
 
 $(PATH)/%.o:$(PATH)/%.c
-	$(CC) $(CFLAGS) -c $(SRCS) -o $(OBJS)
+	$(CC) $(CFLAGS) -I $(HEADER) -c $< -o $@
 
 $(LIBFT) : $(OBJS)
 	ar rcs $(LIBFT) $(OBJS)

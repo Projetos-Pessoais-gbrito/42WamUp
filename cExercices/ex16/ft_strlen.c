@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 21:03:10 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 21:45:41 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 18:31:12 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {

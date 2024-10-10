@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:02:04 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/09 10:12:15 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 17:18:04 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_display_file()
 {
 	int fd;
 	int sz;
-	char* c = (char*)calloc(100, sizeof(char));
+	char c[100];
 
 	fd = open("text.txt", O_RDONLY);
 	if (fd < 0) {

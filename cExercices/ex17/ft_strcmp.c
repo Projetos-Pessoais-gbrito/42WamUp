@@ -3,16 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 21:10:06 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 21:46:18 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 18:31:16 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {

@@ -3,25 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 00:38:36 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 21:38:07 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 20:35:21 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_iterative_factorial(int nb)
 {
 	int	i;
 
 	i = nb - 1;
-	if (nb < 0)
-	{
+	if (nb > 12)
 		return (0);
-	}
-	while (i > 1)
+	if (nb < 0)
+		return (0);
+	while (i >= 1)
 	{
 		nb = nb * i;
 		i--;
@@ -29,8 +27,8 @@ int	ft_iterative_factorial(int nb)
 	return (nb);
 }
 
-int	main(void)
-{
-	ft_iterative_factorial(1000000);
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("%d", ft_iterative_factorial(13));
+// 	return (0);
+// }

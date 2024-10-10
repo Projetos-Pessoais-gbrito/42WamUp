@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 23:49:36 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 20:32:09 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 18:30:45 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char a)
-{
-	write(1, &a, 1);
-}
+void	ft_putchar(char a);
 
 void	ft_is_negative(int n)
 {
@@ -29,8 +24,8 @@ void	ft_is_negative(int n)
 	}
 }
 
-int	main(void)
-{
-	ft_is_negative(-0);
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_is_negative(-0);
+// 	return (0);
+// }
