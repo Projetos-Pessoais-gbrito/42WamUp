@@ -3,41 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:02:04 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/10 21:38:54 by gserafio         ###   ########.fr       */
+/*   Updated: 2024/10/11 12:24:21 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include "includes/header.h"
 
-int ft_display_file()
+void	ft_putchar(char a)
 {
-	int fd;
-	int sz;
-	char c[100];
+	write(1, &a, 1);
+}
 
-	fd = open("text.txt", O_RDONLY);
-	if (fd < 0) {
-		perror("r1");
-		exit(1);
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
 	}
+	write(1, "\n", 1);
+}
 
-	sz = read(fd, c, 9);
-	printf("called read(% d, c, 10). returned that"" %d bytes were read.\n",fd, sz);
-	c[sz] = '\0';
-	printf("Those bytes are as follows: %s\n", c);
+int	ft_display_file(char *argv[])
+{
+	int		fd;
+	int		size;
+	char	c[100];
 
+	fd = open(argv[1], O_RDONLY);
+	if (fd < 0)
+		return (0);
+	size = read(fd, c, 99);
+	c[size] = '\0';
+	ft_putstr(c);
+	close(fd);
 	return (0);
 }
 
-
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	ft_display_file();
+	if (argc > 2)
+	{
+		write(1, "Too many arguments.", 19);
+		write(1, "\n", 1);
+		return (0);
+	}
+	else if (argc < 2)
+	{
+		write(1, "File name missing.", 18);
+		write(1, "\n", 1);
+		return (0);
+	}
+	ft_display_file(argv);
 	return (0);
 }

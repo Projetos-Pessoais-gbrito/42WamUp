@@ -1,15 +1,34 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/10/11 12:24:47 by gustavo-lin       #+#    #+#              #
+#    Updated: 2024/10/11 12:24:49 by gustavo-lin      ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
-
-SRC = ft_display_file.c
-
-DEPENDENCY = $(SRC:.o)
 
 CFLAGS = -Werror -Wall -Wextra
 
-all: ft_display_file.o
+SRCS = ft_display_file.c
 
-ft_display_file.o: $(SRC)
+TARGET := ft_display_file
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf *.o
+	rm -f *.o
+
+fclean:
+	rm -f *.o $(TARGET)
+
+re:
+	@$(MAKE) fclean
+	@$(MAKE) all
