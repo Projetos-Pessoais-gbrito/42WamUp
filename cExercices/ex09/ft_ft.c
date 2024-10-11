@@ -15,13 +15,13 @@ void	ft_ft(int *nbr)
 	*nbr = 42;
 }
 
-int	main(void)
-{
-	int	ft;
-	int	*pointer_ft;
+// int	main(void)
+// {
+// 	int	ft;
+// 	int	*pointer_ft;
 
-	ft = 0;
-	pointer_ft = &ft;
-	ft_ft(pointer_ft);
-	return (0);
-}
+// 	ft = 0;
+// 	pointer_ft = &ft;
+// 	ft_ft(pointer_ft);
+// 	return (0);
+// }

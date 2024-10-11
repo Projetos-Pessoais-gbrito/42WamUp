@@ -19,17 +19,17 @@ void	ft_swap(int *a, int *b)
 	*b = temp;
 }
 
-int	main(void)
-{
-	int	a;
-	int	b;
-	int	*pointer_a;
-	int	*pointer_b;
+// int	main(void)
+// {
+// 	int	a;
+// 	int	b;
+// 	int	*pointer_a;
+// 	int	*pointer_b;
 
-	a = 0;
-	b = 1;
-	pointer_a = &a;
-	pointer_b = &b;
-	ft_swap(pointer_a, pointer_b);
-	return (0);
-}
+// 	a = 0;
+// 	b = 1;
+// 	pointer_a = &a;
+// 	pointer_b = &b;
+// 	ft_swap(pointer_a, pointer_b);
+// 	return (0);
+// }

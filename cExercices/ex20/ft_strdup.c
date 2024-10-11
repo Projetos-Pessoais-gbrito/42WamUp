@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 01:05:04 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/04 21:52:01 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/10/09 20:06:22 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 char	*ft_strdup(char *src)
 {
@@ -25,7 +23,7 @@ char	*ft_strdup(char *src)
 		i++;
 	}
 	src_dup = malloc((i + 1) * sizeof(char));
-	if (src_dup == NULL)
+	if (src_dup == 0)
 	{
 		return (0);
 	}
@@ -39,21 +37,21 @@ char	*ft_strdup(char *src)
 	return (src_dup);
 }
 
-int	main(void)
-{
-	char	*src;
-	char	*str_dup;
+// int	main(void)
+// {
+// 	char	*src;
+// 	char	*str_dup;
 
-	src = "Teste";
-	str_dup = ft_strdup(src);
-	if (str_dup != NULL)
-	{
-		printf("%s", str_dup);
-		free(str_dup);
-	}
-	else
-	{
-		return (0);
-	}
-	return (0);
-}
+// 	src = "Teste";
+// 	str_dup = ft_strdup(src);
+// 	if (str_dup != 0)
+// 	{
+// 		printf("%s", str_dup);
+// 		free(str_dup);
+// 	}
+// 	else
+// 	{
+// 		return (0);
+// 	}
+// 	return (0);
+// }

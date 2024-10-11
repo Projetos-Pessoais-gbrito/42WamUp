@@ -1,31 +1,30 @@
-CC = cc
+CC = gcc
 
-PATH = srcs
+HEADER = ./includes/
 
-SRCS = $(wildcard $(PATH)/*.c)
+SRCS = srcs/ft_putchar.c	srcs/ft_putstr.c	srcs/ft_strcmp.c	\
+				srcs/ft_strlen.c	srcs/ft_swap.c
 
 OBJS = $(SRCS:.c=.o)
 
-CFLAGS = -Werror -Wextra -Wall
-
-HEADER = ./srcs/includes
+CFLAGS = -Werror -Wall -Wextra -I $(HEADER)
 
 LIBFT = libft.a
 
 all: $(LIBFT)
 
-$(PATH)/%.o:$(PATH)/%.c
-	$(CC) $(CFLAGS) -c $(SRCS) -o $(OBJS)
-
-$(LIBFT) : $(OBJS)
+$(LIBFT): $(OBJS)
 	ar rcs $(LIBFT) $(OBJS)
 
+srcs/%.o: srcs/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm ex20/*.o
+	rm -f $(OBJS)
 
-fclean:	clean
-	rm
+fclean:
+	rm -f $(OBJS) $(LIBFT)
 
-# sequencia de execução .c + .h -> .o (object file) -> para gerar p .a precisa utilzar o comando -c(Assembly) -> .out | .exe | binario executavel
-
-#wildcard serve para utilizar o *
+re:
+	@$(MAKE) fclean
+	@$(MAKE) all
